@@ -35,6 +35,16 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
+    },
+    proxy: {
+      '/api': {
+        target: 'http://ihrm-java.itheima.net/',
+        // 是否跨域
+        ChangeOrigin: true
+        // pathRewrite: {
+        //   '^/api': ''
+        // }
+      }
     }
   },
   configureWebpack: {
