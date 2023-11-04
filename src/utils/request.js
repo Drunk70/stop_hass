@@ -9,13 +9,14 @@ const service = Axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
   timeout: 5000
 })
-const TimeOut = 3600 // 定义规定的超时时间
+const TimeOut = 7600 // 定义规定的超时时间
 
 // 请求拦截器             这个config必须return
 service.interceptors.request.use(config => {
   if (store.getters.token) {
+    console.log('353535')
     // 判断token是否过期
-    if (isTimeOut) {
+    if (isTimeOut()) {
       store.dispatch('user/logout')
       router.push('/login')
       return Promise.reject(new Error('token 超时'))

@@ -1,7 +1,7 @@
 import { getToken, setToken, removeToken, setTimeStamp } from '@/utils/auth'
 import { login, getUserInfo, getUserDetail } from '@/api/user'
 const state = {
-  token: getToken() || null,
+  token: getToken(),
   userInfo: {}
 }
 const mutations = {
@@ -40,7 +40,7 @@ const actions = {
     return res
   },
   // 登出
-  l0gout(context) {
+  logout(context) {
     context.commit('remToken')
     context.commit('removeUserInfo')
   }
