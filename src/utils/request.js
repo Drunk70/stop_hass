@@ -14,7 +14,7 @@ const TimeOut = 7600 // 定义规定的超时时间
 // 请求拦截器             这个config必须return
 service.interceptors.request.use(config => {
   if (store.getters.token) {
-    console.log('353535')
+    console.log(store.getters.token)
     // 判断token是否过期
     if (isTimeOut()) {
       store.dispatch('user/logout')
