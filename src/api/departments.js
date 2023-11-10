@@ -16,7 +16,7 @@ export function getDepartments() {
 export function delDepartments(id) {
   return request({
     url: `/company/department/${id}`,
-    method: 'delete'
+    method: 'DELETE'
   })
 }
 /** *

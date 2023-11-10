@@ -53,11 +53,10 @@ export default {
     // 获取组织数据
     async getDepartments() {
       const res = await getDepartments()
-      console.log(res, '组织架构数据')
       this.company = { name: res.companyName, manager: '负责人', id: '' }
       this.departs = tranListToTreeData(res.depts, '')
     },
-    // 点击操作添加、编辑 方法
+    // 点击操作添加 方法
     addDepts(node) {
       // 打开弹出框
       this.showDialog = true
