@@ -43,11 +43,21 @@ export const constantRoutes = [
       meta: { title: '主页', icon: 'dashboard' }
     }]
   },
+  {
+    path: '/import',
+    component: Layout,
+    hidden: true,
+    children: [{
+      path: '',
+      name: 'import',
+      component: () => import('@/views/import')
+    }]
+  },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
 
-// 动态路由 
+// 动态路由
 export const asyncRoutes = [
   approvals,
   attenddances,
