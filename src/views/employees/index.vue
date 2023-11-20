@@ -9,7 +9,7 @@
         <template #after>
           <el-button type="primary" size="small" @click="$router.push('/import?type=user')">导入</el-button>
           <el-button type="primary" size="small" @click="exportData">导出</el-button>
-          <el-button type="primary" size="small" icon="el-icon-plus" @click="showDialog = true ">新增员工</el-button>
+          <el-button type="primary" size="small" icon="el-icon-plus" :disabled="!checkPermission('POINT-USER-ADD')" @click="showDialog = true ">新增员工</el-button>
         </template>
       </PageTools>
       <!-- 表格数据 -->

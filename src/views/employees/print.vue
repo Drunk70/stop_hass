@@ -1,4 +1,5 @@
 <template>
+  <!-- 设置id 确定打印范围 -->
   <div id="myPrint" class="dashboard-container">
     <div class="app-container">
       <el-card>

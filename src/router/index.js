@@ -8,7 +8,7 @@ import permission from '@/router/modules/permission'
 import salarys from '@/router/modules/salarys'
 import setting from '@/router/modules/setting'
 import social from '@/router/modules/social'
-
+// import userRouter from './modules/user'
 Vue.use(Router)
 
 /* Layout */
@@ -52,9 +52,8 @@ export const constantRoutes = [
       name: 'import',
       component: () => import('@/views/import')
     }]
-  },
-  // 404 page must be placed at the end !!!
-  { path: '*', redirect: '/404', hidden: true }
+  }
+  // userRouter // 放置一个都可以访问的路由
 ]
 
 // 动态路由
@@ -72,7 +71,7 @@ export const asyncRoutes = [
 const createRouter = () => new Router({
   // mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
-  routes: [...constantRoutes, ...asyncRoutes]
+  routes: [...constantRoutes]
 })
 
 const router = createRouter()
