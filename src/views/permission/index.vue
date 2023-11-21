@@ -53,6 +53,7 @@
         </el-col>
       </el-row>
     </el-dialog>
+    <Footer />
   </div>
 </template>
 

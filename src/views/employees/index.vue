@@ -71,6 +71,7 @@
       <add-employee :show-dialog.sync="showDialog" />
       <!-- 分配角色组件 -->
       <assign-role ref="assignRole" :show-role-dialog.sync="showRoleDialog" :user-id="userId" />
+      <Footer />
     </div>
   </div>
 </template>

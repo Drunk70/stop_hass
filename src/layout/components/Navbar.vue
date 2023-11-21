@@ -9,6 +9,12 @@
     <!-- <breadcrumb class="breadcrumb-container" /> -->
 
     <div class="right-menu">
+      <!-- 放置多语言插件 -->
+      <lang-select class="right-menu-item" />
+      <!-- 放置全局插件 -->
+      <screen-full class="right-menu-item" />
+      <!-- 放置切换主题组件 -->
+      <theme-picker class="right-menu-item" />
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
           <img v-imagerror="defaultImg" :src="staffPhoto" class="user-avatar">
@@ -73,7 +79,7 @@ export default {
   height: 50px;
   overflow: hidden;
   position: relative;
-  background-image: -webkit-linear-gradient(left, #3d6df8, #5b8cff);  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+ background-image: -webkit-linear-gradient(left, #3d6df8, #5b8cff);  box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
     line-height: 46px;
@@ -86,10 +92,6 @@ export default {
     &:hover {
       background: rgba(0, 0, 0, .025)
     }
-  }
-
-  .breadcrumb-container {
-    float: left;
   }
   .app-breadcrumb {
   display: inline-block;
@@ -109,6 +111,9 @@ export default {
     margin-left: 15px;
   }
 }
+  .breadcrumb-container {
+    float: left;
+  }
 
   .right-menu {
     float: right;
@@ -119,13 +124,19 @@ export default {
       outline: none;
     }
 
+   .name {
+          color: #fff;
+          vertical-align: middle;
+          margin-left:5px;
+   }
+
     .right-menu-item {
       display: inline-block;
       padding: 0 8px;
       height: 100%;
       font-size: 18px;
       color: #5a5e66;
-      vertical-align: text-bottom;
+      vertical-align: middle;
 
       &.hover-effect {
         cursor: pointer;
@@ -136,11 +147,7 @@ export default {
         }
       }
     }
-    .name{
-      color: #fff;
-          vertical-align: middle;
-          margin-left:5px;
-    }
+
     .avatar-container {
       margin-right: 30px;
 
@@ -148,15 +155,17 @@ export default {
         margin-top: 5px;
         position: relative;
 
-        .user-avatar {
+      .user-avatar {
           cursor: pointer;
           width: 30px;
           height: 30px;
           border-radius: 15px;
           vertical-align: middle;
 
-        }
-
+   }
+      .user-dropdown {
+           color: #fff;
+    }
         .el-icon-caret-bottom {
           cursor: pointer;
           position: absolute;

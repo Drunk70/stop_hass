@@ -17,6 +17,7 @@
       </el-card>
     </div>
     <AddDept ref="addDepts" :show-dialog.sync="showDialog" :tree-node="node" @upDepts="getDepartments" />
+    <Footer />
   </div>
 </template>
 

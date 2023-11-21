@@ -28,7 +28,9 @@
     .scrollbar-wrapper {
       overflow-x: hidden !important;
       background: url('~@/assets/common/leftnavBg.png') no-repeat 0 100%;
-
+      .el-menu-item.is-active{
+        background-color: #d3dce6 !important;
+      }
     }
 
     .el-scrollbar__bar.is-vertical {
@@ -93,6 +95,7 @@
       }
     }
 
+
     // menu hover
     .submenu-title-noDropdown,
     .el-submenu__title {
@@ -100,7 +103,6 @@
         background-color: $menuHover !important;
       }
     }
-
     .is-active>.el-submenu__title {
       color: $subMenuActiveText !important;
     }
@@ -128,7 +130,6 @@
     .submenu-title-noDropdown {
       padding: 0 !important;
       position: relative;
-
       .el-tooltip {
         padding: 0 !important;
 
@@ -228,6 +229,7 @@
       // you can use $subMenuHover
       background-color: $menuHover !important;
     }
+
   }
 
   // the scroll bar appears when the subMenu is too long
