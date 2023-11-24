@@ -30,8 +30,8 @@
               <el-pagination
                 background
                 :current-page="page.page"
-                :total="page.total"
                 layout="total,prev, pager, next,sizes,jumper"
+                :total="page.total"
                 :page-sizes="[2, 5, 7, 10]"
                 :page-size="page.pagesize"
                 @current-change="changePage"
@@ -170,6 +170,8 @@ export default {
       const { rows, total } = await getRoleList(this.page)
       this.list = rows
       this.page.total = total
+      console.log(total)
+      console.log(typeof (this.page.total))
     },
     // 点击页数
     changePage(newPage) {
